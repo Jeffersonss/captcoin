@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Metas -->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Sistema de Controle">
+        <meta name="author" content="Luciano Alves">
+
+        <!-- Título-->
+        <title>Login</title>
+        
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/assets/plugins/fontawesome/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/assets/plugins/icheck/icheck-bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/assets/plugins/adminLTE/css/adminlte.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/assets/plugins/fonts/font-google.css" />
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="shortcut icon" href="assets/logo.svg">
+      
+    </head>
+
+    <body class="hold-transition login-page"> 
+       
+       
+        <section>
+            <a class="logo container" href="loja.html"><img src="assets/logo.svg" > Capital.f.c </a>
+            <div class="content container">
+                
+                <div class="fundo__ilustracao">        
+                    <img  class="ilustracao" src="assets/ilustração.png" alt="Coruja Capital">
+                </div>
+                
+                <div class="login-box">
+                
+                <!-- Formulario -->
+                        <h2>Faça o login para iniciar sua sessão</h2>
+                        
+                        <form class="needs-validation" id="formLogin"  action="<?php echo BASE_URL; ?>/login/checkLogin" method="post" novalidate>
+                            
+                            <!-- cpf -->
+                            <div class="input-container">
+                                <input type="text" class="form-control" name="edcpf" id="edcpf" data-mask="000.000.000-00"  placeholder="CPF" required>
+                                <span class="invalid-tooltip">CPF Inválido</span>
+                            </div>
+    
+                            <!-- Senha -->
+                            <div class="input-container">
+                                <input type="password" class="form-control" placeholder="Senha"  name="edsenha" required>
+                                <span class="invalid-tooltip">Digite sua Senha</span>
+                            </div>
+                            
+                            <!-- btn Enviar -->
+                            <button type="submit" class="btn"> Entrar</button>
+                            
+                            
+                            <!-- Faça seu Cadastro -->
+                            <div  class="link-cadastro-container">
+                                <a href="<?php echo BASE_URL; ?>/cadastro" class="link-cadastro"> Faça seu Cadastro</a>
+                            </div>
+                            
+                        </form>
+                </div>            
+            </div>
+
+        </section>
+
+      <!-- /.login-box -->
+        
+
+        <!-- JQuery/JavaScript -->
+        <script src="<?php echo BASE_URL; ?>/assets/plugins/jquery/jquery.min.js"></script>
+        <script src="<?php echo BASE_URL; ?>/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="<?php echo BASE_URL; ?>/assets/plugins/adminLTE/js/adminlte.min.js"></script>
+        <script src="<?php echo BASE_URL; ?>/assets/plugins/mobile/maskMobile.js"></script>
+        <script src="<?php echo BASE_URL; ?>/assets/personalizado/js/script.js"></script>
+        
+        <!-- Exibir Mensagem de Retorno -->
+        <!-- <?php 
+            $type  = ($msgReturnErr == '') ? "success" : "error";
+            $title =  "Login no Sistema";      
+            $msg   = ($type == 'success') ? $msgReturnSucc : $msgReturnErr; 
+
+            if ($msgReturnSucc <> '' OR $msgReturnErr <> '') :
+        ?>         -->
+            <script src="<?php echo BASE_URL; ?>/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+            <script type="text/javascript">
+                function alerta(type, title, message){
+                    Swal.fire({
+                        icon: type,
+                        title: title,
+                        text: message,
+                        showConfirmButton: false,
+                        timer: 3000
+                    });
+                }
+
+                alerta("<?php echo $type; ?>", "<?php echo $title; ?>", "<?php echo $msg; ?>");
+            </script>    
+        <?php endif; ?> <!-- /Mensagem de Retorno -->
+
+    </body>
+    
+</html>

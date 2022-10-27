@@ -1,0 +1,22 @@
+.promocoes .lista__item .porcentagem{
+    position: absolute;
+    top: -.2rem;
+    right: -.2rem;
+    font-size: 2.4rem;
+    z-index: 2;
+    padding: calc(var(--space) * 2);
+    background-color: #E25F5F;
+    color: white;
+    font-weight: 800;
+
+}
+.item__btn__valores{
+    display: flex;
+    align-items: center;
+}
+.item__valor__riscado{
+    color: #767D8F;
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    margin-left:  calc(var(--space) );
+}

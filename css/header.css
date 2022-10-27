@@ -1,0 +1,131 @@
+
+.landing .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+}
+
+.landing .logo{
+    color: white;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+    font-style: normal;
+}
+.logo img{
+    margin-right: .8rem;
+}
+
+.landing .menu button{
+    color: white;
+    background: url(../assets/menu-icon-branco.svg);
+}
+.menu button{
+    background: url(../assets/menu-icon.svg);
+    background-repeat: no-repeat;
+    border: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
+.menu button::before{
+    content: "menu";
+    position: relative;
+    left: -5ch;
+    bottom: .25rem;
+}
+
+.lista__menu{
+    position: absolute;
+    z-index: 20;
+    top: 15vh;
+    right: 0;
+    background-color: white;
+    padding: 3.2rem;
+    width: 50%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 300ms;
+}
+
+.landing .lista__menu a{
+    color: var(--dark-color);
+}
+
+.lista__menu a{
+    font-size: 1.6rem;
+    color: var(--dark-color);
+}
+
+.lista__menu li{
+    margin: 3.2rem 0;
+}
+.icon__carrinho{
+    display: flex;
+    align-items: center;
+}
+
+.iconify:hover{
+    color: var(--primary-color) !important;
+}
+
+.landing .btn.btn--branco{
+    background-color: var(--secundary-color);
+    color: white !important;
+}
+
+@media(min-width:800px) {
+    .menu nav{
+        display: block;
+    }
+    .menu button{
+        display: none;
+    }
+    .lista__menu{
+        display: flex;
+        align-items: center;
+        transition: none;
+        transform: none;
+        position: static;
+        padding: 0;
+        width: auto;
+        background-color: transparent;
+    }
+    .lista__menu li{
+        margin-left: calc(var(--space) * 4);
+    }
+    .lista__menu a{
+        color: var(--dark-color);
+        font-size: 1.8rem;
+    }
+    .lista__menu a:hover{
+        color: var(--primary-color) !important;
+    }
+    .text_carrinho{
+        display: none;
+    }
+    .landing .lista__menu a{
+        color: white;
+    }
+    .landing .btn.btn--branco{
+        background-color: white;
+        color: var(--primary-color) !important;
+    }
+    .landing .btn.btn--branco:hover{
+        color: white !important;
+    }
+}

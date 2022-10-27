@@ -1,0 +1,88 @@
+.hero{
+    background: url(../assets/img-hero-fundo.jpg);
+    height: 62.8rem;
+    position: relative;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.hero__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 62.8rem;
+}
+.hero__content{
+    color: white;
+    z-index: 10;
+    order: 2;
+    margin-bottom: 4.8rem;
+}
+.hero__content h3{
+    font-size: 1.8rem;
+    margin-bottom: var(--space);
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+}
+.hero__content h3::before{
+    content: "";
+    background: url(../assets/ornamento.svg);
+    width: 2.5rem;
+    height: 2rem;
+    margin-right: var(--space);
+}
+.hero__content h1{
+    font-size: 3.6rem;
+    font-style: italic;
+    margin-bottom: calc(var(--space) * 3);
+    line-height: 3.6rem;
+    text-transform: uppercase;
+}
+.hero__content p{
+    margin-bottom: calc(var(--space) * 4);
+}
+.ilustra{
+    position: absolute;
+}
+.hero::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(359.44deg, #161B2A 39.1%, rgba(22, 27, 42, 0.6) 55.3%);
+}
+@media(min-width:800px) {
+    .hero__container{
+        flex-direction: row;
+        align-items: center; 
+    }
+    .hero__content{
+        margin-top: 0;
+        margin-bottom: 0;
+        order: 1;
+    } 
+    .hero__content h1{
+        font-size: 4.8rem;
+    }
+    .hero__content h3{
+        font-size: 2.4rem;
+    }
+    .ilustra{
+        position: static;
+        order: 2;
+        z-index: 1;
+        width: 43rem;
+        margin-top: 5rem;
+    }
+    .hero__container .btn{
+        width: 24rem;
+    }
+    .hero::after{
+        background: linear-gradient(360deg, #161B2A 38.95%, rgba(22, 27, 42, 0.7) 100%);
+    }
+}
+

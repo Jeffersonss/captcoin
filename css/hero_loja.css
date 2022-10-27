@@ -1,0 +1,89 @@
+
+.hero{
+    background: url(../assets/img-hero-fundo.jpg);
+    background-repeat: no-repeat;
+    background-position: 90%;
+    position: relative;
+    height: 39.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: calc(var(--space) * 4);
+}
+.hero::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(22, 27, 42, 0.9)
+}
+.hero__content{
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero img{
+    display: none;
+}
+
+.hero h1{
+    font-size: 1.8rem;
+    display: flex;
+    margin-bottom: var(--space);
+}
+.hero h1::before{
+    content: "";
+    background: url(../assets/ornamento.svg);
+    width: 2.5rem;
+    height: 2rem;
+    margin-right: var(--space);
+}
+.hero h2{
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: calc(var(--space) * 2);
+}
+.hero p{
+    margin-bottom: calc(var(--space) * 3);
+}
+
+@media(min-width:800px){
+    .loja .container{
+        padding: 0 !important; 
+    }
+    
+    .loja .hero{
+        padding: 6rem !important;
+    }
+
+
+    .hero{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10rem;
+    }
+    
+    .hero img{
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+    .hero__content .btn{
+        width: 22rem;
+    }
+    .hero__content h1{
+        font-size: 2.2rem;
+    }
+    .hero h2{
+        font-size: 4.2rem;
+    }
+    .hero p{
+        width: 80%;
+    }
+    
+}

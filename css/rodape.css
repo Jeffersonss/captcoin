@@ -1,0 +1,107 @@
+#rodape-bootstrap{
+    padding-top: calc(var(--space) * 10);
+}
+
+.sobre footer{
+    padding-top: calc(var(--space) * 10);
+}
+
+.sobre .footer__body{
+    margin-top: 5rem;
+}
+
+footer{
+    background-color: var(--dark-color);
+    padding-bottom: 2rem !important;
+}
+.lista__menu__rodape{
+    margin-top: calc(var(--space) * 3);
+    margin-bottom: calc(var(--space) * 6);
+}
+
+.lista__menu__rodape li{
+    margin-bottom: calc(var(--space) * 2);
+}
+.lista__menu__rodape a{
+    font-size: 1.8rem;
+    color: white;
+}
+
+.lista__menu__rodape a:hover{
+    color: var(--primary-color);
+}
+
+/* .lista__menu__rodape .btn{
+    width: 50%;
+    padding: calc(var(--space));
+    background-color: white;
+    color: var(--secundary-color);
+} */
+.rodape__itens{
+    color: white;
+}
+.rodape__itens li{
+    margin-bottom: calc(var(--space) * 4);
+}
+
+.rodape__itens h5{
+    font-size: 1.8rem;
+    margin-bottom: calc(var(--space) * 2);
+    font-weight: bold;
+}
+.rodape__itens p{
+    font-size: 1.6rem;
+}
+.rodape__itens strong{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.rodape__itens a{
+    color: white;
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: var(--space);
+    
+}
+footer .logo{
+    text-transform: uppercase;
+    color: white !important; 
+}
+.loja .footer__body{
+    margin-top: calc(var(--space) * 10);
+} 
+.footer__body a:hover {
+    color: var(--primary-color);
+}
+
+@media(min-width:800px){
+    
+    .footer__header{
+        display: flex;
+        height: 10vh;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: calc(var(--space) * 7);
+    }
+    .rodape__itens{
+        display: flex;
+        justify-content: space-between;
+    }
+    .lista__menu__rodape{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        height: 10vh;
+       
+    }
+    .item__menu{
+        margin-left: calc(var(--space) * 3);
+    }
+
+    .item__menu .btn{
+        width: 15rem;
+        padding: 1.2rem;
+    }
+
+}

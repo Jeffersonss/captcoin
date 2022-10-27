@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Metas -->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Sistema de Controle">
+        <meta name="author" content="Luciano Alves">
+        <link rel="shortcut icon" href="assets/logo.svg">
+
+
+        <!-- Título-->
+        <title>Cadastro | Captcoin</title>
+        
+        <!-- css -->
+        <style>
+           
+            
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/adminlte.min.css" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/cadastro.css">
+        <link rel="stylesheet" href="css/rodape.css">
+       
+    </head>
+
+    <body class="cadastro">
+        <a href="loja.html" class="logo container"><img src="assets/logo.svg" alt="">Capital F.C</a>
+        <div class="container">
+
+            <section class="content-header sessTit">
+                <div class="container-fluid">
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <h1 style="margin-left: -15px">Formulário de Cadastro</h1>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <ol style="margin-top: 20px; margin-right: 10px; margin-left: -15px; font-size: 1.8rem" class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="loja.html">Home</a></li>
+                                <li class="breadcrumb-item">Formulário de Cadastro</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conteudo -->
+            <section class="content sessMargin">
+
+                <div class="row">
+
+                    <div class="col-md-7">
+
+                        <form class="needs-validation" novalidate action="<?php echo BASE_URL; ?>/cadastro/addMod" method="post" enctype="multipart/form-data">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Dados Pessoais</h3>
+                                    
+                                </div>
+
+                                <div class="card-body">
+                                    <!-- Linha 1 -->
+                                    <div class="form-row">
+                                        <div class="form-group form-group-sm col-md-12">
+                                            <label for="ednome">Nome </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="fas fa-user"></i></div> </div>
+                                                <input type="text" class="form-control text-uppercase" name="ednome" maxlength="100" value="" required autofocus>
+                                                <div class="invalid-tooltip">Digite o Nome</div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!-- Linha 2 -->
+                                    <div class="form-row">
+                                        <div class="form-group form-group-sm col-md-12">
+                                            <label for="edemail">Email </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="far fa-envelope"></i></div> </div>
+                                                <input type="email" class="form-control text-lowercase" name="edemail" maxlength="100" required>
+                                                <div class="invalid-tooltip">Digite um Email Válido</div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!-- Linha 3 -->
+                                    <div class="form-row">
+                                        <div class="form-group form-group-sm col-md-6">
+                                            <label for="edcpf">CPF</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="far fa-address-card"></i></div> </div>
+                                                <input type="text" class="form-control" name="edcpf" id="edcpf" data-mask="000.000.000-00" autocomplete="off" required>
+                                                <div class="invalid-tooltip">CPF Inválido</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-group-sm col-md-6">
+                                            <label for="edstatus">Status</label>
+                                            <select class="form-control" name="edstatus" id="edstatus" disabled>
+                                                <option value="ATIVO" >CADASTRADO</option>
+                                                <option value="INATIVO" >INATIVO</option>
+                                            </select>
+                                        </div>
+                                    </div>    
+                                    <!-- Linha 4 -->
+                                    <div class="form-row">    
+                                        <div class="form-group form-group-sm col-md-6">
+                                            <label for="edsenha">Senha </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="fas fa-lock"></i></div> </div>
+                                                <input type="password" class="form-control" name="edsenha" maxlength="32" value="" required>
+                                                <div class="invalid-tooltip">Digite a Senha</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-group-sm col-md-6">
+                                            <label for="edsenha2">Digite a Senha Novamente </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="fas fa-lock"></i></div> </div>
+                                                <input type="password" class="form-control" name="edsenha2" maxlength="32" value="" required>
+                                                <div class="invalid-tooltip">As Senhas precisam ser iguais</div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!-- Linha 5 -->
+                                    <div class="form-row">                               
+                                        <div class="form-group form-group-sm col-md-6">
+                                            <label for="ednasc">Data de Nasc.</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="far fa-calendar-alt"></i></div> </div>
+                                                <input type="text" class="form-control" name="ednasc" data-mask="00/00/0000" autocomplete="off" required>
+                                                <div class="invalid-tooltip">Digite a Data de Nasc.</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-group-sm col-md-6">
+                                            <label for="edfone">Telefone</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="fas fa-phone-alt"></i></div> </div>
+                                                <input type="text" class="form-control" name="edfone" data-mask="(00) 00000-0000" autocomplete="off" required>
+                                                <div class="invalid-tooltip">Digite o Telefone</div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!-- Linha 6 -->
+                                    <div class="form-row">
+                                        <div class="form-group form-group-sm col-md-12">
+                                            <label for="ednmae">Nome da Mãe</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="far fa-user-circle"></i></div> </div>
+                                                <input type="text" class="form-control text-uppercase" name="ednmae" maxlength="100" value="" required>
+                                                <div class="invalid-tooltip">Digite o Nome da Mãe</div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <!-- Linha 7 -->
+                                    <div class="form-row">
+                                        <div class="form-group form-group-sm col-md-6">
+                                            <label for="edvalor">Valor em Reais (10:1) </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="fas fa-dollar-sign"></i></div> </div>
+                                                <input type="text" class="form-control" name="edvalor" data-mask="#.##0,00" data-mask-reverse="true" data-mask-maxlength="false" required>
+                                                <div class="invalid-tooltip">Digite um valor múltiplo de 10</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-group-sm col-md-6">
+                                            <label for="edcodInvest">Cod. de Indicação</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"> <div class="input-group-text"><i class="fas fa-user-shield"></i></div> </div>
+                                                <input type="text" class="form-control text-uppercase" name="edcodInvest" id="edcodInvest" maxlength="6">
+                                                <div class="invalid-tooltip">Código Inválido</div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <!-- Linha 8 -->
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="edobs">Observações</label>
+                                            <textarea  class="form-control" id="edobs" name="edobs" rows="4" ></textarea>
+                                        </div>
+                                    </div>
+
+                                </div><!-- /.card-body -->
+
+                            </div><!-- /.card -->
+
+                            <!-- BOTÃO SUBMIT -->
+                            <div class="form-row mt-5 mb-4">
+                                <button type="submit" class="btn btn-lg btn-block btn-primary mb-5">Cadastrar</button>  
+                            </div> <!-- /.form-row -->
+
+                        </form>
+
+                    </div><!-- /.col -->
+
+                    <div class="col-md-5">
+
+                        <!-- TIMELINE -->
+                        <div class="timeline">
+
+                            <div><!-- timeline item 01 -->
+                                <i class="fas fa-usd bg-blue">1º</i>
+                                <div class="timeline-item">
+                                    <span class="time text-primary"><i class="fas fa-user-edit"></i></span>
+                                    <h3 class="timeline-header text-primary">Vamos fazer o Cadastro!</h3>
+                                    <div class="timeline-body">
+                                        Este Formulário tem a finalidade de obter dados necessários para 
+                                        abertura de conta individual em nome de novos usuários dos Serviços
+                                        prestados pela CAPTCOIN.<br/></br>
+                                        <b>Preencha todos os campos Obrigatórios.</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div><!-- timeline item 02 -->
+                                <i class="fas fa-usd bg-blue">2º</i>
+                                <div class="timeline-item">
+                                    <span class="time text-primary"><i class="fas fa-dollar-sign"></i></span>
+                                    <h3 class="timeline-header text-primary">Depositar o Valor Adquirido!</h3>
+                                    <div class="timeline-body">
+                                        O Valor defindo para Capital Incial, poderá ser realizado através de
+                                        Deposito Bancário, Transferência Eletrônica (TED/DOC) ou PIX.
+                                        Basta usar os Dados Bancário abaixo:<br/><br/>
+                                        Cod. do Banco: <b>077 (Banco Inter)</b> <br/>
+                                        Agencia: <b>0001</b> <br/>
+                                        C/C <b>3242534-9 </b><br/>
+                                        Nome: <b>LUCIANO ALVES DOS SANTOS </b><br/>
+                                        CNPJ: <b>01.899.0001/34 </b><br/><br/>
+                                        PIX: <b>01.899.0001/34</b>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div><!-- timeline item 03 -->
+                                <i class="fas fa-usd bg-blue">3º</i>
+                                <div class="timeline-item">
+                                    <span class="time text-primary"><i class="far fa-clock"></i></i></span>
+                                    <h3 class="timeline-header text-primary">Aguarde a Validação do Cadastro e Saldo</h3>
+                                    <div  class="timeline-body">
+                                        Sua conta será Ativada imediatamente após a realizaçao do seu Cadastro. Porém, o Saldo
+                                        só será credita em sua conta, após a Compensação Bacária. <br/> <br><!-- comment --> 
+                                        <b>O prazo inicial é de até 24horas.</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div><!-- timeline item 04 -->
+                                <i class="fas fa-usd bg-blue">4º</i>
+                                <div class="timeline-item">
+                                    <span class="time text-primary"><i class="fas fa-shopping-cart"></i></span>
+                                    <h3 class="timeline-header text-primary">Pronto! Vamos as Compras</h3>
+                                    <div class="timeline-body">
+                                        Após a validação do seu Saldo, você poderá ir ate a Loja
+                                        e comprar tudo que temos a disposição. Lembre-se que 
+                                        os valores das mercadorias estão em Captcoin.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div><!-- timeline item  -->
+                                <i class="fas fa-undo-alt bg-blue"></i>
+                                <div class="timeline-item">
+                                    <span class="time text-bold text-primary"><i class="fas fa-undo-alt"></i></span>
+                                    <h3 class="timeline-header text-primary">Recarrege seu Saldo</h3>
+                                    <div class="timeline-body">
+                                        Recarregue seu saldo para que possa comprar cada vez 
+                                        mais moeda. Entre na Movimentação de Mercado e 
+                                        deixe sua oferta ou adquiria as que estão a venda.
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                    </div>
+
+                </div><!-- /.row -->
+
+            </section>
+        
+        </div>
+        <footer id="rodape-bootstrap">
+            <div class="footer__header container">
+                <span class="logo"> <img src="assets/logo.svg" alt="Brasão do Capital C.F."> Capital C.F.</span>
+            </div>
+    
+            <div class="footer__body container">
+                <ul class="rodape__itens">
+                    <li>
+                        <h5>Contatos</h5>
+                        <p><strong>Tel</strong> </p>
+                        <p><strong>E-mail</strong> </p>
+                    </li>
+                    <li>
+                        <h5>Endereço</h5>
+                        <p> <a href="https://g.page/prime-educ?share" target="_blank"> CRS 514 Via W3 Sul, Bloco B, Loja 59 - Primeiro andar, Asa sul </a></p>
+                        <p><strong>CEP:</strong> 70380525</p>
+                    </li>
+                    <li>
+                        <h5>Termos de uso </h5>
+                        <a href="">Termos de uso</a>
+                        <a href="">Política de privacidade</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- /.container -->
+        <script src="https://kit.fontawesome.com/ebe8179c4d.js" crossorigin="anonymous"></script>
+        <!-- JQuery/JavaScript -->
+        <script src="<?php echo BASE_URL; ?>/assets/plugins/jquery/jquery.min.js"></script>
+        <script src="<?php echo BASE_URL; ?>/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="<?php echo BASE_URL; ?>/assets/plugins/adminLTE/js/adminlte.min.js"></script>
+        <script src="<?php echo BASE_URL; ?>/assets/plugins/mobile/maskMobile.js"></script>
+        <script src="<?php echo BASE_URL; ?>/assets/personalizado/js/script.js"></script>
+        
+        <!-- Exibir Mensagem de Retorno -->
+    
+    </body>
+    
+</html>

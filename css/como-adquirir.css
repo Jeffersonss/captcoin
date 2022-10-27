@@ -1,0 +1,95 @@
+.como-adquirir .carrosel__item{
+    background-image: url(../assets/img-galery-1.png);
+    background-position: center;
+    background-size: cover;
+    width: 170px;
+    height: 122px;
+    filter:drop-shadow(10px 5px 10px rgba(42, 143, 209, 0.29));
+}
+
+.como-adquirir .carrosel__item:nth-child(1){
+    background-image: url(../assets/img-galery-agua.png);
+}
+.como-adquirir .carrosel__item:nth-child(2){
+    background-image: url(../assets/img-galery-uniforme.png);
+}
+.como-adquirir .carrosel__item:nth-child(3){
+    background-image: url(../assets/img-galery-cerveja.png);
+}
+.como-adquirir .carrosel__item:nth-child(4){
+    background-image: url(../assets/img-galery-casaco.png);
+}
+.como-adquirir .carrosel__item:nth-child(5){
+    background-image: url(../assets/img-galery-bonebranco.png);
+}
+.como-adquirir .carrosel__item:nth-child(6){
+    background-image: url(../assets/img-galery-uniforme-goleiro.png);
+}
+.como-adquirir .carrosel__item:nth-child(7){
+    background-image: url(../assets/img-galery-uniforme-azul.png);
+}
+.como-adquirir .carrosel__item:nth-child(8){
+    background-image: url(../assets/img-galery-bolsa.png);
+}
+
+
+.como-adquirir .carrosel{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
+    row-gap: calc(var(--space) * 2.2);
+    scrollbar-width: none;
+    align-items: center; 
+    margin-bottom: calc(var(--space) * 4);
+    margin-top: calc(var(--space) * 4);
+}
+
+.galery.como-adquirir{
+    box-shadow: none;
+}
+
+.galery.como-adquirir{
+    margin-top: calc(var(--space) * 14);
+}
+
+@media(min-width:800px){
+    .galery.como-adquirir{
+        overflow: hidden;
+    }
+    .galery__container{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        position: relative;
+        max-width: 1024px;
+        margin: auto;
+       
+    }
+    .como-adquirir .carrosel{
+        width: auto;
+     }
+    .carrosel__item{
+        width: 100%;
+        height: 100%;
+    }
+    .como-adquirir .galery__content{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .como-adquirir .galery__container .btn{
+        grid-column: 1/2;
+        width: 32rem;
+        margin-left: -1px;
+    }
+    .como-adquirir .carrosel{
+        grid-column: 2/3;
+        grid-row: 1/1;
+        position: absolute;
+        top:-4rem;
+        width: 50vw;
+        scrollbar-width: initial;
+        height: 32.5rem;
+    }
+
+}
